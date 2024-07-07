@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container" id="settingsContainer">
+        <h1 class="title">Tic Tac Toe</h1>
+        <div class="input-container">
+            <label for="playerName">Player Name:</label>
+            <input type="text" id="playerName" placeholder="Enter your name">
+        </div>
+        <div class="input-container">
+            <label for="aiName">AI Name:</label>
+            <input type="text" id="aiName" placeholder="Enter AI name">
+        </div>
+        <div class="input-container">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        <button id="startGameButton" class="start-game-btn">Start Game</button>
+        <p id="warningMessage" class="warning-message">Please enter player and AI names!</p>
+    </div>
+
+    <div class="container" id="gameContainer" style="display: none;">
+        <h1 class="title">Tic Tac Toe</h1>
+
+        <div class="board" id="board">
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+        <div class="message" id="message"></div>
+
+        <div class="button-container">
+            <button class="btn" id="restartButton">Restart</button>
+            <button class="btn" id="backButton">Back to Settings</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

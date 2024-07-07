@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('images/th.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    background-color: rgba(77, 111, 166, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    width: 80%;
+    text-align: left;
+}
+
+.input-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+.input-container input,
+.input-container select {
+    width: calc(100% - 20px);
+    margin: 5px 10px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.start-game-btn {
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.start-game-btn:hover {
+    background-color: #45a049;
+}
+
+.warning-message {
+    display: none;
+    color: rgb(18, 18, 18);
+    margin-top: 10px;
+}
+
+#gameContainer {
+    display: none;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #44a1b1;
+    border: 2px solid #0b00003d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cell:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+@keyframes placeMark {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+
